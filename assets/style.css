@@ -6,12 +6,13 @@
     --menu-color: white;
     scroll-behavior: smooth;
     font-size: 1.15rem;
+    font-family:Georgia, 'Times New Roman', Times, serif
 
 
 }
 
 body {
-    width: 90%;
+    width: 90vw;
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
@@ -54,7 +55,7 @@ section h2 {
 }
 
 
-h3 {
+h3, h4 {
     text-align: center;
 }
 
@@ -78,14 +79,15 @@ header img {
 
 body .nav {
     position: sticky;
-    top: -1vh;
-    background-color: var(--sub-color);
-    padding-top: 2vh;
+    top: -0.25vh;
+    background-color: var(--main-color);
+    padding-top: 1.25vh;
     padding-bottom: .75rem;
-    border-bottom:.5vh solid var(--sub-color);
+    border-top: -1vh solid var(--main-color);
     border-bottom-left-radius: 1vh;  
     border-bottom-right-radius: 1vh;
     margin-bottom: 1vh;
+    z-index: 90;
 
 }
 
@@ -103,7 +105,7 @@ body .nav {
     transform: translate(-1.25vw, 0);
     margin-left: 5vw;
     margin-right: 5vw;
-    color: white;
+    color: var(--menu-color);
     width: 25rem;
     border-radius: .5rem;
     background-color: var(--menu-color);
@@ -118,20 +120,29 @@ body .nav {
 
 .nav li:hover {
    
-    scale: 1.25;
-    transform: translate(-1.5vw, 0);
+    scale: 1.15;
+    transform: translate(-1.15vw, 0);
     background-color: var(--background-color);
-
 
 }
 
-.nav h2:visited {
+.nav li:active {
+    scale:1.05;
+    
+}
+.nav li:visited h2 {
     color: var(--main-color);
 }
 
 .nav li:hover h2 {
     color: var(--menu-color);
 }
+
+.nav li:active h2 {
+    color: var(--main-color);
+}
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -164,19 +175,6 @@ body .nav {
     
 } */
 
-/* main .works {
-    min-height: 59vh;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    padding-top: 3vh;
-    padding-bottom: 20vh;
-    border-bottom-right-radius: 1vh;
-    border-bottom-left-radius: 1vh;
-    margin-bottom: 1vh;
-} */
-
 .worksgrid {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -203,23 +201,29 @@ body .nav {
     grid-row-end: 3;
 }
 
-.worksgrid img {
-    width: 20vw;
-    height: 20vh;
+.main a img, .sub a img {
+    display: block;
+    border-radius: 1vh;
+    box-shadow: -.25vh .25vh 2.5vh black;
+    transition: ease-in-out 0.3s;
+    background-color: var(--main-color);
 }
 
 .main a img {
-    display: block;
     width: 100%;
     height: 90%;
-    background-color: #772014;
 
 }
 
 .sub a img {
-    display: block;
     margin: auto;
-    background-color: #772014;
+
+}
+
+.main a img:hover, .sub a img:hover {
+    scale: 1.025;
+    box-shadow: -.15vh .15vh .5vh black;
+    filter:brightness(1.05);
 }
 
 
@@ -227,66 +231,81 @@ body .nav {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.footer {
-    display: flex;
-    justify-content: space-evenly;
-    height: 20vh;
+.mainfooter {
+    color: var(--text-color);
+    columns: 3;
     padding-top: 3vh;
     line-height: 4vh;
     border-top-left-radius: 1vh;
-    border-top-right-radius: 1vh;
+    border-top-right-radius: 1vh; 
     background-color: var(--main-color);
  
 }
 
-.footeritem {
-    display: flex;
-    justify-content: center;
-    
+.mainfooter .footer {
+    display: block;
+    position: relative;
+    top: -2vh;
+
 }
 
-footer li {
-    height: 3.5vh;
-    width: 3.5vw;
-    min-width: 70px;
-    min-height: 70px;
-    border-top: 3vh;
-    border-bottom: 3vh;
-    padding-left: 1vw;
+.mainfooter li img {  
+    display: block;
+    position: relative;
+    margin: auto;
+    transform: translate(-1.5vw, 0);
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    transition: ease-in-out 250ms;
+}
+
+.mainfooter li img:hover {
+    scale: 1.1;
+    transform: translate(-1.35vw, 0);
+    filter:brightness(1.25);
+
+}
+
+.mainfooter li {
+    position: relative;
+    display: block;  
+    margin: auto;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .parallax {
     background-image: url("../assets/img/qk6505.jpg");
-    height: 30vh; 
+    height: 29.75vh; 
     border-radius: 1vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 130vh;
+    background-size: cover;
     margin-bottom: 1vh;
     border-radius: 1vh;
   }
 
 .parallax2 {
     background-image: url("../assets/img/cl08.jpg");
-    height: 30vh; 
+    height: 29.75vh; 
+    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 130vh;
+    background-size: cover;
     margin-bottom: 1vh;
     border-radius: 1vh;
 }
 
 .parallax3 {
     background-image: url("../assets/img/lm02.jpg");
-    height: 30vh; 
+    height: 29.75vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 130vh;
+    background-size: cover;
     margin-bottom: 1vh;
     border-radius: 1vh;
 }
@@ -334,7 +353,7 @@ footer li {
     cursor: pointer;
     margin-left: 50%;
     transform: translate(-53%, 0);
-    transition: ease-in-out 0.25s;
+    transition: ease-in-out 125ms;
     
   }
   
@@ -343,6 +362,12 @@ footer li {
   transform: translate(-11.75vw, 0);
   scale: 1.15;
   
+  }
+
+  .contact button:active {
+    transform: translate(-12.75vw, 0);
+    scale: 1.05;
+    color: var(--text-color);
   }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -394,6 +419,18 @@ footer li {
         min-width: 300px;
     }
 
+    .mainfooter {
+        display: inline-block;
+        columns: 1;
+        width: 90vw;
+        text-align: left;
+    }
+
+    .mainfooter img {
+        margin:auto;
+        transform: translate(-4.5vw, 0);
+    }
+
   }
   
 
@@ -409,13 +446,28 @@ footer li {
     
     .nav li {
         font-size: .5rem;
+        transform: translate(-3.25vw, 0);
 
+    }
+
+    .nav li:hover {
+   
+        scale: 1.15;
+        transform: translate(-3vw, 0);
     }
 
     main .works {
         flex-wrap: wrap;
     }
 
+    .form {
+        transform: translate(-2vw, 0);
+    }
+
+    .mainfooter img {
+        margin:auto;
+        transform: translate(-100.5vw, 0);
+    }
   }
 
   @media only screen and (max-device-width: 1366px) {
