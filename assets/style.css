@@ -20,9 +20,11 @@ a:hover {
     cursor: pointer;
 }
 
-header {
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-}
+/* header {
+
+} */
 
 header img {
     margin-left: 0;
@@ -47,6 +49,8 @@ h1 {
     transition: ease-in-out .15s;
 
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 body .nav {
     position: sticky;
@@ -97,6 +101,8 @@ body .nav {
 
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .aboutme div{
     background-color: var(--main-color);
     margin-bottom: 1vh;
@@ -106,10 +112,8 @@ body .nav {
 .aboutme img {
     width: 200px;
     height: 200px;
-    border: .25vw solid var(--main-color);
+    border: 1rem solid var(--main-color);
     border-radius: 1vw;
-    margin-right: 1.5rem;
-    margin-bottom: .25rem;
     float: left;
     
 }
@@ -119,12 +123,13 @@ body .nav {
 
 }
 
-main {
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* main {
     
+} */
 
-}
-
- h2 {
+section h2 {
     color: var(--inverse-sub-color);
     text-align: center;
     background-color: var(--sub-color);
@@ -139,7 +144,7 @@ main .works {
     justify-content: space-evenly;
     background-color: aqua;
     padding-top: 3vh;
-    padding-bottom: 80vh;
+    padding-bottom: 20vh;
     border-bottom-right-radius: 1vh;
     border-bottom-left-radius: 1vh;
     margin-bottom: 1vh;
@@ -148,6 +153,8 @@ main .works {
 h3 {
     text-align: center;
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .footer {
     display: flex;
@@ -177,9 +184,11 @@ footer li {
     padding-left: 1vw;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .parallax {
     background-image: url("../assets/img/qk6505.jpg");
-    height: 25vh; 
+    height: 30vh; 
     border-radius: 1vh;
     background-attachment: fixed;
     background-position: center;
@@ -191,7 +200,7 @@ footer li {
 
 .parallax2 {
     background-image: url("../assets/img/cl08.jpg");
-    height: 25vh; 
+    height: 30vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -199,6 +208,66 @@ footer li {
     margin-bottom: 1vh;
     border-radius: 1vh;
 }
+
+.parallax3 {
+    background-image: url("../assets/img/lm02.jpg");
+    height: 30vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130vh;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+  .contact {
+    opacity: 1;
+    background: #fff;
+  
+  }
+  
+  .contact .form-element {
+    margin: 2vw 2vw;
+  }
+  
+  .contact label {
+    font-size: 1rem;
+    display: block;
+  
+  }
+  
+  .contact input[type="text"], 
+  .contact textarea {
+    margin-top: 5px;
+    display: flex;
+    width: 95%;
+    padding: 10px;
+    outline:none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  
+  }
+  
+  .contact button {
+    width: 25vw;
+    height: 40px;
+    font-size: 1.25rem;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translate(-53%, 0);  
+  }
+  
+  .contact button:hover {
+  color: brown;
+  
+  }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 992px) {
     header {
