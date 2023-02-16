@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
     font-size: 1.15rem;
     font-family:Georgia, 'Times New Roman', Times, serif
-
+    /* created CSS var for ease of change later */
 
 }
 
@@ -17,6 +17,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     height: auto;
+    /* more visually pleasing */
 }
 
 /* a:link {
@@ -41,9 +42,10 @@ h1 {
     font-weight: 300;
     z-index: 100;
     transition: ease-in-out 75ms;
+    /* first animation and use of media query */
 
 }
-
+    /* placed all headers near each other of easy modification */
 section h2 {
     color: var(--text-color);
     text-align: center;
@@ -64,7 +66,7 @@ h3, h4 {
 /* header {
 
 } */
-
+/* first use of object fit and z-index */
 header img {
     margin-left: 0;
     margin-right: 0;
@@ -77,6 +79,7 @@ header img {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* will be copy pasta ing this later */
 body .nav {
     position: sticky;
     top: -0.25vh;
@@ -118,6 +121,7 @@ body .nav {
     
 }
 
+/* psuedo classes in action  */
 .nav li:hover {
    
     scale: 1.15;
@@ -147,6 +151,7 @@ body .nav {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* majority of CSS in vh/vw */
 .aboutme div{
     background-color: var(--background-color);
     margin-bottom: 1vh;
@@ -176,6 +181,7 @@ body .nav {
     
 } */
 
+/* learning grid the hard way, works fine, needs for testing */
 .worksgrid {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -232,6 +238,7 @@ body .nav {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* Look away it's hidious */
 .mainfooter {
     color: var(--text-color);
     columns: 3;
@@ -276,6 +283,7 @@ body .nav {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* Look for a better meathod later */
 .parallax {
     background-image: url("../assets/img/qk6505.jpg");
     height: 29.75vh; 
@@ -311,6 +319,7 @@ body .nav {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+    /* copy pasta from a prior work with mild tweens to fit app. */
   .contact {
     opacity: 1;
     background: var(--background-color);
@@ -375,9 +384,10 @@ body .nav {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+/* Tablet screen */
 @media screen and (max-width: 992px) {
     header {
-      background: #772014;
+      background: var(--background-color);
       
     }
 
@@ -401,7 +411,7 @@ body .nav {
 
 @media screen and (max-width: 768px) {
     header {
-        background-color: #772014;
+        background-color: var(--background-color);
         
       }
     h1 {
@@ -436,7 +446,7 @@ body .nav {
 
   }
   
-
+/* Phone screen */
 @media screen and (max-width: 576px) {
     header {
         background: var(--sub-color);
@@ -473,6 +483,7 @@ body .nav {
     }
   }
 
+  /* limit parallax from overly large screens */
   @media only screen and (max-device-width: 1366px) {
     .parallax {
       background-attachment: scroll;

@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- copied reset sheet, mildly modified for application -->
   <link rel="stylesheet" type="text/css" href="./assets/reset.css" />
   <link rel="stylesheet" type="text/css" href="./assets/style.css" />
 </head>
@@ -15,6 +16,7 @@
         </img>
     </header>
         <h1>Russo Borneo</h1>
+        <!-- nav bar starts here -->
         <nav class="nav">
             <ul>
                 <li><a href="#link1"><h2>About Me</h2></a></li>
@@ -25,6 +27,7 @@
 
         <div id="link1"></div>
         <section class="aboutme">
+        <!-- add actual info later -->
         <h2>About Me</h2>
             <div>
                 <img src="./assets/img/russo.png" alt="Russo Borneo">
@@ -36,24 +39,28 @@
                     quas ipsam, ea asperiores tenetur rerum incidunt delectus voluptatum? Laboriosam, tempora quia.</p>
             </div>
         </section>
-
+    
+    <!-- first time using parallax, will ask for help later -->
     <div class="parallax"></div>
 
     <main>
 
+        <!-- in page link does not work with classes, not sure if best practice -->
         <div id="link2"></div>
 
         <section>
         <h2>Works</h2>
-
-            <div class="works">
+            <div class="works">\
+                <!-- first time using grid, looked over 2hrs should be fine...TM -->
                 <ul class="worksgrid">
+                    <!-- had to create a separate class for main project -->
                     <li class="main">
                         <a href="https://russob22.github.io/saving-horiseon-with-refactoring/" target="_blank">
                         <img src="./assets/img/horiseon.png" alt="Horiseon">
                         </a>
                         <h3>Horiseon</h3>                    
                     </li>
+                    <!-- only 1 project done, others left blank -->
                     <li class="sub">
                         <a href="#" target="_blank"> 
                         <img src="./assets/img/404.png" alt="blank">
@@ -84,18 +91,17 @@
                         </a>
                         <h3>Blank</h3>
                     </li>
-
                 </ul>
             </div>
-
         </section>
    
     </main>
-
+    <!-- ran into a weird clipping issue, solve by removing a border property -->
     <div class="parallax2"></div>
 
     <section>
     <div id="link3"></div>
+        <!-- had to change transfor translate best friend, poor phone compatability  -->
         <section class="contact">
         <h2>Contact</h2>
         <ul class="form">
@@ -120,6 +126,7 @@
 
     <div class="parallax3"></div>
 
+    <!-- still not perfect, but ussable -->
     <footer>
         <section class="mainfooter">
         <div class="footer">
