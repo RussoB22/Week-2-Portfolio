@@ -385,7 +385,7 @@ body .nav {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Tablet screen */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1100px) {
     header {
       background: var(--background-color);
       
@@ -404,6 +404,10 @@ body .nav {
         display: flex;
         flex-wrap: wrap;
         justify-content:center;
+    }
+
+    .mainfooter {
+        padding-bottom: 5vh;
     }
 
   }
@@ -457,8 +461,38 @@ body .nav {
 
 @media screen and (max-width: 1000px ) and (orientation: landscape) {
     .mainfooter {
-        padding-bottom: 15vh;
+        padding-bottom: 18vh;
     }
+
+    .footer {
+        display: block;
+        position: relative;
+        margin: auto;
+    }
+
+    .footer ul {
+        display: inline-flex;
+
+    }
+    
+}
+
+@media screen and (max-width: 550px ) and (orientation: portrait) {
+    .mainfooter {
+        padding-bottom: 18vh;
+    }
+
+    .footer {
+        display: block;
+        position: relative;
+        margin: auto;
+    }
+
+    .footer ul {
+        display: inline-flex;
+
+    }
+    
 }
 
 
