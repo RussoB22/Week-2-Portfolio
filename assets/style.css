@@ -1,0 +1,193 @@
+:root {
+    --main-color: blue;
+    --sub-color: black;
+    --background-color: white;
+}
+
+body {
+    width: 90%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+header {
+
+}
+
+header img {
+    margin-left: 0;
+    margin-right: 0;
+    width: 90vw;
+    max-height: 25vh;
+    object-fit: cover;
+    z-index: 99;
+    opacity: 1;
+}
+
+h1 {
+    position: absolute;
+    color: black;
+    font-size: 8rem;
+    text-shadow: .125rem .125rem .3rem white;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-weight: 300;
+    z-index: 100;
+
+}
+
+body .nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--sub-color);
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    border-bottom:.5vh solid var(--sub-color);
+    border-bottom-left-radius: 1vh;  
+    border-bottom-right-radius: 1vh;
+    margin-bottom: 1vh;
+
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+
+}
+
+
+
+.nav li {
+    margin-left: 3rem;
+    margin-right: 2rem;
+    color: white;
+    
+}
+
+main {
+    
+
+}
+
+main .works {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-color: aqua;
+    padding-top: 3vh;
+    padding-bottom: 80vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+}
+
+main h2 {
+    text-align: center;
+    line-height: 4rem;
+}
+
+footer {
+    justify-content: space-between;
+    height: 20vh;
+    padding-top: 3vh;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    line-height: 4vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    background-color: var(--main-color);
+ 
+}
+
+.footerl {
+    float: left;
+    
+}
+
+.footerr {
+    float: right;
+}
+
+footer ul h3 {
+    text-align: center;
+    
+}
+
+footer li {
+    height: 2.5vh;
+    width: 2.5vw;
+    min-width: 70px;
+    min-height: 70px;
+    border-top: 3vh;
+    border-bottom: 3vh;
+    padding-left: 1vw;
+}
+
+.parallax {
+    background-image: url("../assets/img/qk6505.jpg");
+    height: 25vh; 
+    border-radius: 1vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130vh;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
+  }
+
+.parallax2 {
+    background-image: url("../assets/img/cl08.jpg");
+    height: 25vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130vh;
+    margin-bottom: 1vh;
+    border-radius: 1vh;
+}
+
+@media screen and (max-width: 992px) {
+    header {
+      background: #772014;
+    }
+  }
+  
+
+@media screen and (max-width: 768px) {
+    header {
+        background: #772014;
+      }
+    
+    header .nav {
+      background-color: #bb8588;
+    }
+
+  }
+  
+
+@media screen and (max-width: 576px) {
+    header {
+        background: var(--sub-color);
+      }
+    
+    main .works {
+        flex-wrap: wrap;
+    }
+
+  }
+
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+  
