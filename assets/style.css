@@ -1,10 +1,13 @@
 :root {
-    --main-color: blue;
-    --sub-color: black;
-    --background-color: white;
-    --inverse-sub-color: white;
+    --main-color: rgb(128, 0, 32);
+    --sub-color: rgb(128, 0, 32);
+    --background-color: rgb(255, 32, 64);
+    --text-color: white;
     --menu-color: white;
     scroll-behavior: smooth;
+    font-size: 1.15rem;
+
+
 }
 
 body {
@@ -15,9 +18,44 @@ body {
     height: auto;
 }
 
-a:hover {
-    color: red;
-    cursor: pointer;
+/* a:link {
+    color: var(--main-color);
+}
+
+a:visited {
+    color: var(--sub-color);
+
+} */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+h1 {
+    position: absolute;
+    color: var(--main-color);
+    font-size: 6.5vh;
+    text-shadow: .125rem .125rem .3rem white;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-weight: 300;
+    z-index: 100;
+    transition: ease-in-out .15s;
+
+}
+
+section h2 {
+    color: var(--text-color);
+    text-align: center;
+    background-color: var(--sub-color);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-top-right-radius: 1vh;
+    border-top-left-radius: 1vh;
+}
+
+
+h3 {
+    text-align: center;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -36,27 +74,13 @@ header img {
     opacity: 1;
 }
 
-h1 {
-    position: absolute;
-    color: black;
-    font-size: 6.5vh;
-    text-shadow: .125rem .125rem .3rem white;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    font-weight: 300;
-    z-index: 100;
-    transition: ease-in-out .15s;
-
-}
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 body .nav {
     position: sticky;
-    top: 0;
+    top: -1vh;
     background-color: var(--sub-color);
-    padding-top: .75rem;
+    padding-top: 2vh;
     padding-bottom: .75rem;
     border-bottom:.5vh solid var(--sub-color);
     border-bottom-left-radius: 1vh;  
@@ -67,7 +91,7 @@ body .nav {
 
 .nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
 
 
@@ -76,16 +100,16 @@ body .nav {
 
 
 .nav li {
-    transform: translate(-15%, 0);
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    transform: translate(-1.25vw, 0);
+    margin-left: 5vw;
+    margin-right: 5vw;
     color: white;
     width: 25rem;
     border-radius: .5rem;
     background-color: var(--menu-color);
     transition: ease-in-out 0.25s;
     padding: .5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     text-align: center;
     line-height: 1rem;
@@ -93,33 +117,44 @@ body .nav {
 }
 
 .nav li:hover {
-    color: var(--inverse-sub-color);
+   
     scale: 1.25;
-    transform: translate(-15%, 0);
-    background-color: aqua;
-    
+    transform: translate(-1.5vw, 0);
+    background-color: var(--background-color);
 
+
+}
+
+.nav h2:visited {
+    color: var(--main-color);
+}
+
+.nav li:hover h2 {
+    color: var(--menu-color);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .aboutme div{
-    background-color: var(--main-color);
+    background-color: var(--background-color);
     margin-bottom: 1vh;
     border-bottom-left-radius: 1vh;  
     border-bottom-right-radius: 1vh;
+    min-height: 59vh;
 }
 .aboutme img {
     width: 200px;
     height: 200px;
-    border: 1rem solid var(--main-color);
-    border-radius: 1vw;
+    border: 1rem solid var(--background-color);
+    border-radius: 2vw;
+    margin-top: 4%;
     float: left;
     
 }
 
 .aboutme p {
     padding: 3.35rem;
+    color: var(--text-color);
 
 }
 
@@ -129,30 +164,66 @@ body .nav {
     
 } */
 
-section h2 {
-    color: var(--inverse-sub-color);
-    text-align: center;
-    background-color: var(--sub-color);
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    border-top-right-radius: 1vh;
-    border-top-left-radius: 1vh;
-}
-
-main .works {
+/* main .works {
+    min-height: 59vh;
     display: flex;
     justify-content: space-evenly;
-    background-color: aqua;
+    background-color: var(--background-color);
+    color: var(--text-color);
     padding-top: 3vh;
     padding-bottom: 20vh;
     border-bottom-right-radius: 1vh;
     border-bottom-left-radius: 1vh;
     margin-bottom: 1vh;
+} */
+
+.worksgrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: var(--background-color);
+    padding: 1vh;
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    margin-bottom: 1vh;
 }
 
-h3 {
+.worksgrid li {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--main-color);
+    padding: 20px;
+    font-size: 30px;
     text-align: center;
+
 }
+
+.worksgrid .main {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.worksgrid img {
+    width: 20vw;
+    height: 20vh;
+}
+
+.main a img {
+    display: block;
+    width: 100%;
+    height: 90%;
+    background-color: #772014;
+
+}
+
+.sub a img {
+    display: block;
+    margin: auto;
+    background-color: #772014;
+}
+
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -224,7 +295,10 @@ footer li {
 
   .contact {
     opacity: 1;
-    background: #fff;
+    background: var(--background-color);
+    border-radius: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
   
   }
   
@@ -254,16 +328,20 @@ footer li {
     width: 25vw;
     height: 40px;
     font-size: 1.25rem;
-    background: #222;
-    color: #f5f5f5;
+    background: var(--main-color);
+    color: var(--text-color);
     border-radius: 10px;
     cursor: pointer;
     margin-left: 50%;
-    transform: translate(-53%, 0);  
+    transform: translate(-53%, 0);
+    transition: ease-in-out 0.25s;
+    
   }
   
   .contact button:hover {
-  color: brown;
+  color: var(--background-color);
+  transform: translate(-11.75vw, 0);
+  scale: 1.15;
   
   }
 
@@ -278,6 +356,18 @@ footer li {
     h1 {
         font-size: 4.5vh;
     }
+
+    .nav li {
+        font-size: .8rem;
+
+    }
+
+    .worksgrid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
   }
   
 
@@ -289,7 +379,20 @@ footer li {
     h1 {
         font-size: 3.5vh;
     }
+    .nav li {
+        font-size: .6rem;
     
+    }
+
+    .worksgrid {
+        display: block;
+        
+    }
+
+    .sub img {
+        margin: auto;
+        min-width: 300px;
+    }
 
   }
   
@@ -304,6 +407,11 @@ footer li {
         font-size: 2.75vh;
     }
     
+    .nav li {
+        font-size: .5rem;
+
+    }
+
     main .works {
         flex-wrap: wrap;
     }
