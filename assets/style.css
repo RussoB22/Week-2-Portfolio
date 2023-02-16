@@ -241,7 +241,8 @@ body .nav {
 /* Look away it's hidious */
 .mainfooter {
     color: var(--text-color);
-    columns: 3;
+    display: flex;
+    justify-content: space-evenly;
     padding-top: 3vh;
     line-height: 4vh;
     border-top-left-radius: 1vh;
@@ -251,15 +252,13 @@ body .nav {
 }
 
 .mainfooter .footer {
-    display: block;
-    position: relative;
-    top: -2vh;
+    width: fit-content;
+    top: 2vh;
+    height: 30vh;
 
 }
 
 .mainfooter li img {  
-    display: block;
-    position: relative;
     margin: auto;
     transform: translate(-1.5vw, 0);
     height: 70px;
@@ -279,6 +278,7 @@ body .nav {
     position: relative;
     display: block;  
     margin: auto;
+    padding-top: 2.5vh;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -286,7 +286,7 @@ body .nav {
 /* Look for a better meathod later */
 .parallax {
     background-image: url("../assets/img/qk6505.jpg");
-    height: 29.75vh; 
+    height: 35vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -297,7 +297,7 @@ body .nav {
 
 .parallax2 {
     background-image: url("../assets/img/cl08.jpg");
-    height: 29.75vh; 
+    height: 35vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -308,7 +308,7 @@ body .nav {
 
 .parallax3 {
     background-image: url("../assets/img/lm02.jpg");
-    height: 29.75vh; 
+    height: 35vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -429,7 +429,7 @@ body .nav {
 
     .sub img {
         margin: auto;
-        min-width: 300px;
+        min-width: 200px;
     }
 
     .mainfooter {
@@ -447,6 +447,21 @@ body .nav {
   }
   
 /* Phone screen */
+@media screen and (max-width: 450px) {
+    .footer {
+        display: block;
+        position: relative;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1000px ) and (orientation: landscape) {
+    .mainfooter {
+        padding-bottom: 15vh;
+    }
+}
+
+
 @media screen and (max-width: 576px) {
     header {
         background: var(--sub-color);
@@ -469,6 +484,13 @@ body .nav {
         transform: translate(-3vw, 0);
     }
 
+    .aboutme div img {
+        display: block;
+        position: relative;
+        margin: auto;
+        float: none;
+    }
+
     main .works {
         flex-wrap: wrap;
     }
@@ -483,10 +505,23 @@ body .nav {
     }
   }
 
-  /* limit parallax from overly large screens */
-  @media only screen and (max-device-width: 1366px) {
-    .parallax {
-      background-attachment: scroll;
+  @media screen and (max-width: 300px) {
+    .nav ul {
+        flex-wrap: wrap;
+        scale: .8;
+        transform: translate(-3.5vw, 0);
+    }
+
+    .form {
+        transform: translate(-5vw, 0);
     }
   }
-  
+
+  /* limit parallax from overly large screens */
+  /* @media only screen and (max-device-width: 1366px) {
+    .parallax, .parallax2, .parallax3 {
+      background-attachment: scroll;
+      background-clip: content-box;
+    }
+  }
+   */
