@@ -33,14 +33,14 @@ a:visited {
 h1 {
     position: absolute;
     color: var(--main-color);
-    font-size: 6.5vh;
+    font-size: 6.05vh;
     text-shadow: .125rem .125rem .3rem white;
     top: 10%;
     left: 50%;
     transform: translate(-50%, 0%);
     font-weight: 300;
     z-index: 100;
-    transition: ease-in-out .15s;
+    transition: ease-in-out 75ms;
 
 }
 
@@ -109,7 +109,7 @@ body .nav {
     width: 25rem;
     border-radius: .5rem;
     background-color: var(--menu-color);
-    transition: ease-in-out 0.25s;
+    transition: ease-in-out 250ms;
     padding: .5rem;
     font-size: 1rem;
     font-weight: 500;
@@ -130,7 +130,7 @@ body .nav {
     scale:1.05;
     
 }
-.nav li:visited h2 {
+.nav a:visited h2 {
     color: var(--main-color);
 }
 
@@ -140,6 +140,7 @@ body .nav {
 
 .nav li:active h2 {
     color: var(--main-color);
+    transition: ease-in-out 75ms;
 }
 
 
@@ -278,19 +279,17 @@ body .nav {
 .parallax {
     background-image: url("../assets/img/qk6505.jpg");
     height: 29.75vh; 
-    border-radius: 1vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 1vh;
     border-radius: 1vh;
-  }
+}
 
 .parallax2 {
     background-image: url("../assets/img/cl08.jpg");
     height: 29.75vh; 
-    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -328,6 +327,7 @@ body .nav {
   .contact label {
     font-size: 1rem;
     display: block;
+    color: var(--text-color);
   
   }
   
@@ -347,8 +347,8 @@ body .nav {
     width: 25vw;
     height: 40px;
     font-size: 1.25rem;
-    background: var(--main-color);
-    color: var(--text-color);
+    background: var(--text-color);
+    color: var(--main-color);
     border-radius: 10px;
     cursor: pointer;
     margin-left: 50%;
@@ -358,7 +358,8 @@ body .nav {
   }
   
   .contact button:hover {
-  color: var(--background-color);
+  color: var(--text-color);
+  background-color: var(--background-color);
   transform: translate(-11.75vw, 0);
   scale: 1.15;
   
@@ -368,6 +369,8 @@ body .nav {
     transform: translate(-12.75vw, 0);
     scale: 1.05;
     color: var(--text-color);
+    transition: ease-in-out 75ms;
+    background-color: var(--main-color);
   }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
