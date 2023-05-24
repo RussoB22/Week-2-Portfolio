@@ -12,8 +12,9 @@
   }
 
   body {
-    line-height: 1.5;
+    line-height: 1.5rem;
     -webkit-font-smoothing: antialiased;
+    font-variant-ligatures: no-common-ligatures;
   }
 
   img, picture, video, canvas, svg {
@@ -33,6 +34,7 @@
     isolation: isolate;
   }
 
-  a:link {
+  a:link, li {
     text-decoration: none;
+    list-style: none;
   }
